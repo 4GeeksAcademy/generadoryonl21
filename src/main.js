@@ -1,6 +1,6 @@
-// Array de excusas
+// array de excusas
 const excusas = [
-  "Mi perro se comió mi tarea.",
+  "Mitarea se comio a mi perro.",
   "Estaba esperando que me dieran más instrucciones.",
   "Me distraje con un video interesante.",
   "Tuve problemas con mi computadora.",
@@ -13,10 +13,11 @@ const excusas = [
 ];
 
 // Función para seleccionar una excusa al azar
-function mostrarExcusas() {
+function mostrarExcusa() {
   const indiceAleatorio = Math.floor(Math.random() * excusas.length);
-  document.getElementById('excusas').innerText = excusas[indiceAleatorio];
+  document.getElementById("excusas").innerText = excusas[indiceAleatorio];
 }
 
 // Ejecutar la función al cargar la página
-window.onload = mostrarExcusas;
+window.onload = mostrarExcusa;
+
