@@ -1,23 +1,21 @@
-// array de excusas
-const excusas = [
-  "Mitarea se comio a mi perro.",
-  "Estaba esperando que me dieran más instrucciones.",
-  "Me distraje con un video interesante.",
-  "Tuve problemas con mi computadora.",
-  "No pude encontrar el archivo.",
-  "Me olvidé de la fecha de entrega.",
-  "Estaba ocupado ayudando a un amigo.",
-  "No entendí el tema y no supe por dónde empezar.",
-  "Me quedé sin internet.",
-  "Estaba trabajando en otra tarea importante."
-];
+window.onload = function() {
+  // array with the words
+  let first = "Un ";
+  let adj = ["Molesto ", "Maleducado ", "Grosero ", "demoniaco ", "loco ", "Despampanante ", "Impulsivo "];
+  let noun = ["perro ", "abuelo ", "payaso ", "soldado ", "programador ", "raton ", "papanatas "];
+  let action = ["se llevo mi ", "mordio mi ", "me grito ", "me robo mi", "mintio sobre mi ", "se burlo de mi", "se rio de mi", "volo sobre mi "];
+  let possetion = ["rasho laser ", "carro ", "reloj ", "foto en pijamas ", "situacion economica ", "camisa ", "llavero ", "-ordenador ", "movil ", "sandwich "];
+  let where = ["en el hospital", "en mi casa", "en el estadio", "frente a mi mama", "cerca del super", "por el baño", "en la estacion"];
 
-// Función para seleccionar una excusa al azar
-function mostrarExcusa() {
-  const indiceAleatorio = Math.floor(Math.random() * excusas.length);
-  document.getElementById("excusas").innerText = excusas[indiceAleatorio];
+  
+  // declaring random variables
+  let rdm1 = Math.floor(Math.random() * adj.length);
+  let rdm2 = Math.floor(Math.random() * noun.length);
+  let rdm3 = Math.floor(Math.random() * action.length);
+  let rdm4 = Math.floor(Math.random() * possetion.length);
+  let rdm5 = Math.floor(Math.random() * where.length);
+
+  // creating a sentence (the excuse)
+  document.querySelector("#excuse").innerHTML = first + adj[rdm1] + noun[rdm2] + action[rdm3] + possetion[rdm4] + where[rdm5];
+  
 }
-
-// Ejecutar la función al cargar la página
-window.onload = mostrarExcusa;
-
